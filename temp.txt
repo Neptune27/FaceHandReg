@@ -1,0 +1,56 @@
+import time
+from multiprocessing import freeze_support
+
+import cv2
+
+        self.th = FacialRegThread(MainWindow)
+
+
+    @Slot(QImage)
+    def setImage(self, image):
+        if self.tabWidget.currentWidget() == self.mainTab:
+            self.mainImgLabel.setPixmap(QPixmap.fromImage(image))
+        else:
+            self.trainingImgLable.setPixmap(QPixmap.fromImage(image))
+
+    def customConnect(self):
+        self.th.updateFrame.connect(self.setImage)
+        self.mainStartButton.clicked.connect(self.startFR)
+        self.trainingStartButton.clicked.connect(self.startTraining)
+        self.mainStopButton.clicked.connect(self.stopFR)
+        self.trainingStopButton.clicked.connect(self.stopFR)
+        pass
+
+    def startFR(self):
+        print("Starting")
+        self.th.status = True
+        self.th.start()
+
+    def startTraining(self):
+        print("Starting")
+        self.th.status = True
+        self.th.isTraining = True
+        self.th.start()
+        pass
+
+    def stopFR(self):
+        print("Finishing...")
+        self.th.cap.release()
+        cv2.destroyAllWindows()
+        self.status = False
+        self.th.terminate()
+        # Give time for the thread to finish
+        time.sleep(1)
+
+
+if __name__ == "__main__":
+    import sys
+
+    freeze_support()
+    app = QApplication(sys.argv)
+    mainWindows = QMainWindow()
+    mainWindowsUI = Ui_MainWindow()
+    mainWindowsUI.setupUi(mainWindows)
+    mainWindowsUI.customConnect()
+    mainWindows.show()
+    sys.exit(app.exec())

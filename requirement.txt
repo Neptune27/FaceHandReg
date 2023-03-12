@@ -1,0 +1,6 @@
+mediapipe==0.9.1.0
+tensorflow
+pyside6
+imutils
+scikit-learn
+opencv-python

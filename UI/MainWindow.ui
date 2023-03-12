@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>815</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="mainTab">
+       <attribute name="title">
+        <string>Main</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1">
+        <item>
+         <widget class="QLabel" name="mainImgLabel">
+          <property name="minimumSize">
+           <size>
+            <width>640</width>
+            <height>480</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>640</width>
+            <height>480</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>ImgLable</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QPushButton" name="mainStartButton">
+            <property name="text">
+             <string>Start</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="mainStopButton">
+            <property name="text">
+             <string>Stop</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="trainingTab">
+       <attribute name="title">
+        <string>Training</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0,0,0">
+        <item>
+         <widget class="QLabel" name="trainingImgLable">
+          <property name="minimumSize">
+           <size>
+            <width>640</width>
+            <height>480</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>640</width>
+            <height>480</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>ImgLable</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="0,0">
+          <item>
+           <widget class="QLabel" name="trainingPersonLabel">
+            <property name="text">
+             <string>Person: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="personLineEdit"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QPushButton" name="trainingStartButton">
+            <property name="text">
+             <string>Start/Capture</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="trainingStopButton">
+            <property name="text">
+             <string>Stop</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="trainingTrainingButton">
+            <property name="text">
+             <string>Training</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="clearDataButton">
+            <property name="text">
+             <string>Clear Data</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="settingTab">
+       <attribute name="title">
+        <string>Setting</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2"/>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>815</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
