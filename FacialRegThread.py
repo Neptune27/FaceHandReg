@@ -15,7 +15,7 @@ from PySide6.QtGui import QImage, Qt
 
 from HandsRecognition.app import *
 from HandsRecognition.model.keypoint_classifier.keypoint_classifier import KeyPointClassifier
-from Utils.Setting import Setting
+from Utils.Setting import Setting, create_recursive_dir
 
 
 class FacialRegThread(QThread):
@@ -27,9 +27,7 @@ class FacialRegThread(QThread):
 
         self.prevOpenApp = ""
 
-
         self.setting = setting
-
 
         self.trained_file = None
         self.status = True
@@ -300,7 +298,7 @@ class FacialRegThread(QThread):
                 confidence = detections[0, 0, i, 2]
 
                 # filter out weak detections
-                if confidence > 0.5:
+                if confidence > 0.7:
                     # compute the (x, y)-coordinates of the bounding box for the face
                     box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])
                     (startX, startY, endX, endY) = box.astype("int")
@@ -332,6 +330,7 @@ class FacialRegThread(QThread):
                     totalFrame += 1
                     if totalFrame % 2 == 0:
                         try:
+                            create_recursive_dir(path)
                             cv2.imwrite(f"{path}/{total}{self.personName}.jpg", frame)
                             total += 1
                             if total > 200:

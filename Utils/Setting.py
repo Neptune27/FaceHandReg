@@ -5,6 +5,11 @@ import pickle
 from Utils.UserSetting import UserSetting
 
 
+def create_recursive_dir(dir_path):
+    if not os.path.exists(dir_path):
+        os.makedirs(dir_path)
+
+
 class Setting:
     def __init__(self):
         self.user: dict[str, UserSetting] = {}
@@ -24,18 +29,14 @@ class Setting:
             print("[ERROR] Wrong values were parsed, reset to default...")
             self.setDefault()
 
-    def create_recursive_dir(self, dir_path):
-        if not os.path.exists(dir_path):
-            os.makedirs(dir_path)
-
     def setDefault(self):
-        self.create_recursive_dir("data")
+        create_recursive_dir("data")
         setting = Setting()
         with open("data/setting.pickle", "wb") as f:
             f.write(pickle.dumps(setting))
 
     def save(self):
-        self.create_recursive_dir("data")
+        create_recursive_dir("data")
         with open("data/setting.pickle", "wb") as f:
             f.write(pickle.dumps(self))
 
