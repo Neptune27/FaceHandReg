@@ -53,8 +53,7 @@ class FaceRecognitionTrainingThread(QThread):
         # loop over the image paths
         for (i, imagePath) in enumerate(imagePaths):
             # extract the person name from the image path
-            if i % 50 == 0:
-                print("Processing image {}/{}".format(i, len(imagePaths)))
+            print(f"Processing image {i}/{len(imagePaths)}")
             name = imagePath.split(os.path.sep)[-2]
 
             # load the image, resize it to have a width of 600 pixels (while maintaining the aspect ratio),

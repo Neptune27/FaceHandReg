@@ -17,8 +17,13 @@
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="mainTab">
        <attribute name="title">
@@ -39,6 +44,11 @@
             <height>480</height>
            </size>
           </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>ImgLable</string>
           </property>
@@ -48,6 +58,11 @@
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
            <widget class="QPushButton" name="mainStartButton">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>Start</string>
             </property>
@@ -55,6 +70,11 @@
           </item>
           <item>
            <widget class="QPushButton" name="mainStopButton">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>Stop</string>
             </property>
@@ -140,7 +160,472 @@
        <attribute name="title">
         <string>Setting</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_2"/>
+       <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="1,4">
+        <item>
+         <widget class="QListWidget" name="personWidget">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,1">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="1,2,2">
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Hand Type</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Action</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Extra Attribute</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QScrollArea" name="scrollArea">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents_2">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>610</width>
+               <height>503</height>
+              </rect>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="1,2,2">
+                <item>
+                 <widget class="QLabel" name="label_4">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Close</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="closeCB">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>Move Left</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Move Right</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Move Up</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Move Down</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Open</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_3">
+                  <item>
+                   <widget class="QLineEdit" name="closeLE">
+                    <property name="font">
+                     <font>
+                      <pointsize>12</pointsize>
+                     </font>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QToolButton" name="closeOB">
+                    <property name="font">
+                     <font>
+                      <pointsize>12</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="1,2,2">
+                <item>
+                 <widget class="QLabel" name="label_13">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Open</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="openCB">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>Move Left</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Move Right</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Move Up</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Move Down</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Open</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_9">
+                  <item>
+                   <widget class="QLineEdit" name="openLE">
+                    <property name="font">
+                     <font>
+                      <pointsize>12</pointsize>
+                     </font>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QToolButton" name="openOB">
+                    <property name="font">
+                     <font>
+                      <pointsize>12</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_16" stretch="1,2,2">
+                <item>
+                 <widget class="QLabel" name="label_12">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>One</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="oneCB">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>Move Left</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Move Right</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Move Up</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Move Down</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Open</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_11">
+                  <item>
+                   <widget class="QLineEdit" name="oneLE">
+                    <property name="font">
+                     <font>
+                      <pointsize>12</pointsize>
+                     </font>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QToolButton" name="oneOB">
+                    <property name="font">
+                     <font>
+                      <pointsize>12</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_15" stretch="1,2,2">
+                <item>
+                 <widget class="QLabel" name="label_11">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Two</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="twoCB">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>Move Left</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Move Right</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Move Up</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Move Down</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Open</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_12">
+                  <item>
+                   <widget class="QLineEdit" name="twoLE">
+                    <property name="font">
+                     <font>
+                      <pointsize>12</pointsize>
+                     </font>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QToolButton" name="twoOB">
+                    <property name="font">
+                     <font>
+                      <pointsize>12</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_14" stretch="1,2,2">
+                <item>
+                 <widget class="QLabel" name="label_10">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Three</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="threeCB">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>Move Left</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Move Right</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Move Up</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Move Down</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Open</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_10">
+                  <item>
+                   <widget class="QLineEdit" name="threeLE">
+                    <property name="font">
+                     <font>
+                      <pointsize>12</pointsize>
+                     </font>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QToolButton" name="threeOB">
+                    <property name="font">
+                     <font>
+                      <pointsize>12</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
@@ -155,8 +640,26 @@
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuSetting">
+    <property name="title">
+     <string>Setting</string>
+    </property>
+    <addaction name="actionSave"/>
+    <addaction name="actionAdd_New_Person"/>
+   </widget>
+   <addaction name="menuSetting"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionAdd_New_Person">
+   <property name="text">
+    <string>Add New Person</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
