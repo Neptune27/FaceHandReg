@@ -496,6 +496,8 @@ class Ui_MainWindow(object):
 
     def customConnect(self):
 
+        self.MainWindow.setWindowTitle("Face and Hand recognition app")
+
         self.setting = Setting()
         self.setting.load()
 
