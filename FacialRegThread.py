@@ -42,7 +42,6 @@ class FacialRegThread(QThread):
         self.embedder = cv2.dnn.readNetFromTorch("FaceRecognition/openface_nn4.small2.v1.t7")
 
         # load the actual face recognition model along with the label encoder
-        self.le = pickle.loads(open("FaceRecognition/output/le.pickle", "rb").read())
         self.isTraining = False
         self.personName = "WTF"
 
@@ -89,6 +88,7 @@ class FacialRegThread(QThread):
 
     def running(self):
         self.recognizer = pickle.loads(open("FaceRecognition/output/recognizer.pickle", "rb").read())
+        self.le = pickle.loads(open("FaceRecognition/output/le.pickle", "rb").read())
 
         # Coordinate history #################################################################
         history_length = 16
@@ -267,6 +267,7 @@ class FacialRegThread(QThread):
 
     def training(self):
         self.recognizer = pickle.loads(open("FaceRecognition/output/recognizer.pickle", "rb").read())
+        self.le = pickle.loads(open("FaceRecognition/output/le.pickle", "rb").read())
 
         self.cap = cv2.VideoCapture(0)
         path = f"./FaceRecognition/dataset/{self.personName}"
