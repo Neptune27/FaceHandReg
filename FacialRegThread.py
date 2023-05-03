@@ -73,7 +73,6 @@ class FacialRegThread(QThread):
         self.use_brect = True
 
     def run(self):
-        self.recognizer = pickle.loads(open("FaceRecognition/output/recognizer.pickle", "rb").read())
         if self.isTraining:
             self.training()
         else:
@@ -89,6 +88,8 @@ class FacialRegThread(QThread):
                    1.0, (255, 255, 255), 2, cv.LINE_AA)
 
     def running(self):
+        self.recognizer = pickle.loads(open("FaceRecognition/output/recognizer.pickle", "rb").read())
+
         # Coordinate history #################################################################
         history_length = 16
 
@@ -265,6 +266,8 @@ class FacialRegThread(QThread):
             pass
 
     def training(self):
+        self.recognizer = pickle.loads(open("FaceRecognition/output/recognizer.pickle", "rb").read())
+
         self.cap = cv2.VideoCapture(0)
         path = f"./FaceRecognition/dataset/{self.personName}"
         print("Training")
